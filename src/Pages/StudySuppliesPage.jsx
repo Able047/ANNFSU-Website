@@ -31,8 +31,8 @@ const pulseAnimation = keyframes`
 `;
 
 const StudySuppliesPage = () => {
-  // State for exam routine PDF - replace with your actual PDF path
-  const [routinePdfUrl, setRoutinePdfUrl] = useState("src/assets/routine/routine1.pdf");
+
+  const [routinePdfUrl, setRoutinePdfUrl] = useState("/routine/routine1.pdf");
   
   const bgColor = useColorModeValue("gray.50", "gray.900");
   const cardBg = useColorModeValue("white", "gray.800");
