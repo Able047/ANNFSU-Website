@@ -346,7 +346,7 @@ const ContactUs = () => {
                     <Icon as={FaPhone} boxSize={6} color="blue.500" />
                     <Box>
                       <Text fontWeight="bold">Phone</Text>
-                      <Text>986-5465010</Text>
+                      <Text>980-8274740</Text>
                     </Box>
                   </HStack>
 
