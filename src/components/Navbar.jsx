@@ -37,7 +37,7 @@ const Navbar = () => {
     { name: "ANNFSU In FSU", path: "/annfsuInFSU" },
     { name: "Our Protests", path: "/massMovements" },
     { name: "Our Programs", path: "/Follow" },
-    { name: "Study Supplies", path: "/studySupplies" },
+    { name: "ANNFSU's Library", path: "/studySupplies" },
     { name: "Contact", path: "/contact" },
   ];
 
