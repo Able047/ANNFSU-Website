@@ -52,12 +52,12 @@ const contactPersons = [
   {
     name: "Abhisekh Khadka",
     phone: "9861011312",
-    role: "Vice President",
+    role: "Secretary",
   },
   {
     name: "Anusandhan Nepal",
     phone: "9843675554",
-    role: "Secretary",
+    role: "Advisor",
   },
 ];
 
