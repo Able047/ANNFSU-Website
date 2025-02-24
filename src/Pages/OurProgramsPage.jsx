@@ -35,6 +35,9 @@ import {
   FaUsers,
   FaGraduationCap,
   FaChalkboardTeacher,
+  FaLaptopCode,
+  FaCode,
+  FaFutbol,
 } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -63,6 +66,27 @@ const fadeInRight = keyframes`
 
 // Competition data
 const competitions = [
+  {
+    title: "Intertech",
+    description:
+      "Intertech is a flagship Basket-Ball Tournament organized by ANNFSU that brings together students from different engineering disciplines.",
+    icon: FaLaptopCode,
+    color: "teal.500",
+  },
+  {
+    title: "C and Python Programming Workshop",
+    description:
+      "ANNFSU organizes intensive programming workshops focusing on C and Python languages to help students build strong foundations in coding. These workshops cater to beginners and intermediate programmers, featuring hands-on sessions, real-world problem-solving, and mentorship from experienced seniors. Students learn essential programming concepts, algorithmic thinking, and practical implementation skills that complement their academic curriculum.",
+    icon: FaCode,
+    color: "yellow.600",
+  },
+  {
+    title: "Fresher Futsal",
+    description:
+      "The Fresher Futsal tournament is an exciting sports event designed especially to welcome new students to Pulchowk Campus. This tournament encourages freshers to form teams, compete in a friendly environment, and build connections with peers across departments. Beyond promoting physical fitness, the event helps new students integrate into campus life, develop teamwork skills, and form lasting friendships in a fun and engaging setting.",
+    icon: FaFutbol,
+    color: "green.600",
+  },
   {
     title: "Quiz Competition",
     description:
@@ -171,13 +195,23 @@ const OurProgramsPage = () => {
           setHeroImage(sortedImages[0].src);
         }
 
-        // Set featured images for the competitions (next 5 images)
-        if (sortedImages.length > 5) {
-          setFeaturedImages(sortedImages.slice(1, 6).map((img) => img.src));
+        // Set featured images for the competitions (next images)
+        // Need more images now for the additional competitions
+        if (sortedImages.length > 8) {
+          setFeaturedImages(sortedImages.slice(1, 9).map((img) => img.src));
+        } else if (sortedImages.length > 1) {
+          // If not enough images, reuse what we have
+          const availableImages = sortedImages.slice(1).map((img) => img.src);
+          // Create an array with enough images by repeating available ones if needed
+          setFeaturedImages(
+            Array(8)
+              .fill()
+              .map((_, i) => availableImages[i % availableImages.length])
+          );
         }
 
         // Set remaining images for gallery
-        setGalleryImages(sortedImages.slice(6));
+        setGalleryImages(sortedImages.slice(9));
 
         setLoading(false);
       } catch (error) {
@@ -231,7 +265,7 @@ const OurProgramsPage = () => {
               textShadow="2px 2px 4px rgba(0,0,0,0.5)"
               animation={`${fadeIn} 1s ease-in-out`}
             >
-              Extracurricular Competitions
+              Extracurricular Competitions & Programs
             </Heading>
             <Text
               fontSize="xl"
@@ -244,7 +278,7 @@ const OurProgramsPage = () => {
               opacity="0"
               sx={{ animationFillMode: "forwards" }}
             >
-              Fostering creativity, critical thinking, and student engagement
+              Fostering creativity, technical skills, and student engagement
             </Text>
           </Box>
         </Box>
@@ -276,23 +310,24 @@ const OurProgramsPage = () => {
                   </Heading>
                   <Text fontSize="lg" color={textColor} mb={4}>
                     The All Nepal National Free Students' Union (ANNFSU)
-                    organizes a series of Extracurricular Competitions to
+                    organizes a diverse range of activities and competitions to
                     encourage active participation, creativity, and intellectual
-                    engagement among students at Pulchowk Campus. These
-                    competitions are designed to complement academic pursuits by
-                    providing students with opportunities to explore their
-                    talents, hone their skills, and foster a well-rounded
-                    student experience.
+                    engagement among students at Pulchowk Campus. From technical
+                    events like Intertech and programming workshops to sports
+                    competitions and artistic showcases, our programs are
+                    designed to complement academic pursuits by providing
+                    students with opportunities to explore their talents and
+                    develop well-rounded skills.
                   </Text>
                   <Text fontSize="lg" color={textColor}>
-                    The event includes a variety of activities such as Quiz
-                    Competitions, Art Competitions, Debate Competitions, Poetry
-                    Competitions, and more, offering something for every
-                    student, regardless of their interests. By promoting these
-                    activities, ANNFSU aims to cultivate a vibrant campus
-                    culture, where students are encouraged to express
-                    themselves, develop critical thinking, and engage in healthy
-                    competition.
+                    With events catering to various interests – including
+                    technology, sports, arts, debate, and more – ANNFSU aims to
+                    cultivate a vibrant campus culture where students are
+                    encouraged to express themselves, develop critical thinking,
+                    build technical competence, and engage in healthy
+                    competition. These activities create a balanced student
+                    experience that prepares participants for both academic
+                    success and professional excellence.
                   </Text>
                 </Box>
                 {!loading && featuredImages[0] && (
@@ -338,7 +373,7 @@ const OurProgramsPage = () => {
                   transform: "translateX(-50%)",
                 }}
               >
-                Key Features of the Event
+                Key Programs and Events
               </Heading>
 
               {competitions.map((competition, index) => (
@@ -357,7 +392,7 @@ const OurProgramsPage = () => {
                   opacity="0"
                   sx={{ animationFillMode: "forwards" }}
                 >
-                  {!loading && featuredImages[index + 1] && (
+                  {!loading && featuredImages[index] && (
                     <Box
                       flex="1"
                       borderRadius="lg"
@@ -366,7 +401,7 @@ const OurProgramsPage = () => {
                       alignSelf="center"
                     >
                       <Image
-                        src={featuredImages[index + 1] || featuredImages[0]}
+                        src={featuredImages[index+1] || featuredImages[0]}
                         alt={competition.title}
                         w="100%"
                         h="auto"
@@ -430,12 +465,12 @@ const OurProgramsPage = () => {
                 transform: "translateX(-50%)",
               }}
             >
-              Purpose of the Event
+              Purpose of Our Programs
             </Heading>
 
             <Text fontSize="lg" textAlign="center" maxW="800px" mt={6}>
-              Our programs are designed to benefit students in multiple ways,
-              fostering both personal and professional growth.
+              Our activities and competitions are designed to benefit students in
+              multiple ways, fostering both personal and professional growth.
             </Text>
           </VStack>
 
@@ -486,10 +521,10 @@ const OurProgramsPage = () => {
             <Text fontSize="lg" fontStyle="italic">
               By organizing these events, ANNFSU ensures that students not only
               excel in their academic pursuits but also have ample opportunities
-              to explore, showcase, and develop their non-academic skills. This
-              balanced approach contributes to creating well-rounded individuals
-              who are ready to take on leadership roles and make meaningful
-              contributions to society.
+              to explore, showcase, and develop their technical, creative, and
+              interpersonal skills. This balanced approach contributes to
+              creating well-rounded individuals who are ready to take on
+              leadership roles and make meaningful contributions to society.
             </Text>
           </Box>
         </Container>
@@ -564,8 +599,8 @@ const OurProgramsPage = () => {
                 Join Our Next Event
               </Heading>
               <Text fontSize="lg" maxW="800px">
-                Interested in participating in our upcoming competitions?
-                Register now and showcase your talents!
+                Interested in participating in our upcoming events and
+                competitions? Register now and showcase your talents!
               </Text>
               <HStack spacing={4} pt={4}>
                 <Link href="/contact">
