@@ -21,26 +21,17 @@ const App = () => {
   return (
     <ChakraProvider>
       <BrowserRouter>
-        <Helmet>
-          <title>ANNFSU Pulchowk - Student Union of Pulchowk Campus</title>
-          <meta
-            name="description"
-            content="Official website of All Nepal National Free Students' Union (ANNFSU) at Pulchowk Campus, IOE. Find information about student activities, events, and resources."
-          />
-          <meta
-            name="keywords"
-            content="ANNFSU, Pulchowk Campus, अनेरास्ववियु, IOE, student union, Nepal engineering, Pulchowk engineering college"
-          />
-          <meta property="og:title" content="ANNFSU Pulchowk Campus" />
-          <meta
-            property="og:description"
-            content="Official website of ANNFSU at Pulchowk Campus"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://yourwebsite.com" />
-          <meta property="og:image" content="https://yourwebsite.com/src/assets/logo.png" />
-          <link rel="canonical" href="https://yourwebsite.com" />
-        </Helmet>
+      <Helmet>
+  <title>ANNFSU Pulchowk - Student Union of Pulchowk Campus</title>
+  <meta name="description" content="Official website of All Nepal National Free Students' Union (ANNFSU) at Pulchowk Campus, IOE. Find information about student activities, events, and resources." />
+  <meta name="keywords" content="ANNFSU, Pulchowk Campus, अनेरास्ववियु, IOE, student union, Nepal engineering, Pulchowk engineering college, Anera Swabiyu" />
+  <meta property="og:title" content="ANNFSU Pulchowk Campus" />
+  <meta property="og:description" content="Official website of ANNFSU at Pulchowk Campus" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.annfsupulchowk.org" />
+  <meta property="og:image" content="https://www.annfsupulchowk.org/logo.png" />
+  <link rel="canonical" href="https://www.annfsupulchowk.org" />
+</Helmet>
         <TransitionProvider>
           <Box>
             <AnimatedRoutes />
