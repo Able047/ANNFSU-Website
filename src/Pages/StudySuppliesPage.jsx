@@ -17,6 +17,7 @@ import { FaCloudDownloadAlt, FaDownload, FaFilePdf } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { withPageTransition } from "../context/TransitionContext";
+import { Helmet } from "react-helmet";
 
 // Animation keyframes
 const fadeIn = keyframes`
