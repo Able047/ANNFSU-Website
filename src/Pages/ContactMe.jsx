@@ -36,6 +36,7 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { withPageTransition } from "../context/TransitionContext";
+import { Helmet } from "react-helmet";
 
 // Dynamically import images from the directory
 const images = import.meta.glob(
