@@ -22,16 +22,16 @@ const App = () => {
     <ChakraProvider>
       <BrowserRouter>
       <Helmet>
-  <title>ANNFSU Pulchowk - Student Union of Pulchowk Campus</title>
-  <meta name="description" content="Official website of All Nepal National Free Students' Union (ANNFSU) at Pulchowk Campus, IOE. Find information about student activities, events, and resources." />
-  <meta name="keywords" content="ANNFSU, Pulchowk Campus, अनेरास्ववियु, IOE, student union, Nepal engineering, Pulchowk engineering college, Anera Swabiyu" />
-  <meta property="og:title" content="ANNFSU Pulchowk Campus" />
-  <meta property="og:description" content="Official website of ANNFSU at Pulchowk Campus" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.annfsupulchowk.org" />
-  <meta property="og:image" content="https://www.annfsupulchowk.org/logo.png" />
-  <link rel="canonical" href="https://www.annfsupulchowk.org" />
-</Helmet>
+        <title>अनेरास्ववियु पुल्चोक क्याम्पस | ANNFSU Pulchowk Campus</title>
+        <meta name="description" content="अखिल नेपाल राष्ट्रिय स्वतन्त्र विद्यार्थी युनियन (अनेरास्ववियु) पुल्चोक क्याम्पसको आधिकारिक वेबसाइट। Official website of All Nepal National Free Students' Union (ANNFSU) at Pulchowk Campus, IOE." />
+        <meta name="keywords" content="ANNFSU, अनेरास्ववियु, Pulchowk Campus, पुल्चोक क्याम्पस, IOE, student union, Nepal engineering, Pulchowk engineering college, अखिल नेपाल राष्ट्रिय स्वतन्त्र विद्यार्थी युनियन" />
+        <meta property="og:title" content="अनेरास्ववियु पुल्चोक क्याम्पस | ANNFSU Pulchowk Campus" />
+        <meta property="og:description" content="अखिल नेपाल राष्ट्रिय स्वतन्त्र विद्यार्थी युनियन (अनेरास्ववियु) पुल्चोक क्याम्पसको आधिकारिक वेबसाइट। Visit the official website of ANNFSU at Pulchowk Campus." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.annfsupulchowk.org" />
+        <meta property="og:image" content="https://www.annfsupulchowk.org/logo.png" />
+        <link rel="canonical" href="https://www.annfsupulchowk.org" />
+      </Helmet>
         <TransitionProvider>
           <Box>
             <AnimatedRoutes />

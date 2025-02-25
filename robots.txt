@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.annfsupulchowk.org/sitemap.xml
+
+# Crawl-delay to prevent server overload
+Crawl-delay: 10

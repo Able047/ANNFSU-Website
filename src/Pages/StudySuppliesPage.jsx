@@ -44,6 +44,10 @@ const StudySuppliesPage = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Study Resources & Supplies, Engineering Supplies| ANNFSU Pulchowk Campus</title>
+        <meta name="description" content="Access study resources, Engineering Supplies, materials, and supplies provided by ANNFSU for Pulchowk Campus students. अनेरास्ववियुद्वारा प्रदान गरिएका अध्ययन सामग्री र स्रोतहरू।" />
+      </Helmet>
       <Navbar />
       <Box bg={bgColor} minH="100vh" py={8}>
         <Container maxW="container.xl">

@@ -131,6 +131,11 @@ const ContactUs = () => {
   };
 
   return (
+    <>
+    <Helmet>
+    <title>Contact ANNFSU Pulchowk | अनेरास्ववियु पुल्चोक क्याम्पस</title>
+    <meta name="description" content="Get in touch with ANNFSU Pulchowk Campus. Contact information, office location, and online form for inquiries and feedback." />
+  </Helmet>
     <Box>
       <Navbar />
 
@@ -410,6 +415,7 @@ const ContactUs = () => {
 
       <Footer />
     </Box>
+    </>
   );
 };
 
